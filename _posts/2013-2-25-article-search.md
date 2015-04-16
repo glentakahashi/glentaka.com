@@ -1,0 +1,15 @@
+---
+title: "UCLA Article Search"
+subtitle: "Website"
+tags: ["javascript", "python", "jquery", "html5"]
+thumb: "article-search-thumb.png"
+---
+
+![A screenshot of Article Search](/images/portfolio/article-search.png)
+
+One of my projects while working at Simul8 Group was to design a new article searching website that would pull articles asynchronously from databases.
+My partner and I created a RESTful Python API to search articles from databases and
+also made a frontend using Bootstrap, jQuery, and Knockout.js to asynchronously pull from the API.
+The code is private, but you can use our website at [http://articles.uclalibrary.org](http://articles.uclalibrary.org)
+
+Note: You will probably be unable to read the actual articles unless you are on a UCLA IP address

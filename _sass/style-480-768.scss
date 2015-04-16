@@ -1,0 +1,90 @@
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  #container {
+    width: 470px;
+  }
+  /*-------------------------------------------------------*/
+  /* Top Section */
+  /*-------------------------------------------------------*/
+  /* Logo */
+  #logo {
+    h2 {
+      font-size: 25px;
+      font-weight: 900;
+      color: #444;
+      line-height: 30px;
+    }
+    h4 {
+      color: #666;
+      line-height: 15px;
+    }
+  }
+  /* contact icons */
+  .contacticons {
+    margin-top: 9px;
+  }
+  .contact-text {
+    display: none;
+  }
+  /*-------------------------------------------------------*/
+  /* About Section */
+  /*-------------------------------------------------------*/
+  /* About */
+  .about {
+    width: 420px;
+    display: block;
+    min-height: 0;
+    h1 {
+      line-height: 32px;
+      font-size: 30px;
+    }
+    h3 {
+      font-size: 14px;
+      line-height: 14px;
+    }
+    .summary {
+      margin-top: 10px;
+    }
+  }
+  /* Personal info */
+  .personal-info {
+    margin-top: 0;
+    display: block;
+    min-height: 0;
+    margin-bottom: 15px;
+    width: 420px;
+    background: none;
+    border-top: 1px solid #fdc62a;
+    li span {
+      width: 280px;
+    }
+  }
+  /*-------------------------------------------------------*/
+  /* Menu */
+  /*-------------------------------------------------------*/
+  .tabs {
+    padding-left: 5px;
+  }
+  .timeline-section {
+    width: 420px;
+    padding-right: 60px;
+  }
+  /*-------------------------------------------------------*/
+  /* Resume */
+  /*-------------------------------------------------------*/
+  .skills-section {
+    width: 420px;
+  }
+  .skills li h4 {
+    width: 260px;
+  }
+  /*-------------------------------------------------------*/
+  /* Portfolio */
+  /*-------------------------------------------------------*/
+  #portfolio-list {
+    width: 450px;
+    li {
+      margin-right: 40px;
+    }
+  }
+}

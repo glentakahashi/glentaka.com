@@ -1,0 +1,25 @@
+"Lenovo Thinkpad E420":
+  os: "Debian Testing"
+  "window manager": "[cinnamon](http://cinnamon.linuxmint.com/)"
+  editor: "vim"
+  shell: "zsh"
+  terminalstuff: "tmux"
+  browser: "chrome"
+"Custom PC":
+  os: "Windows 7 Ultimate"
+"glentaka.com":
+  dns: "route 53"
+  server: "nginx"
+"Skywrath":
+  host: "linode"
+  size: "4096"
+  purpose: "primary host"
+"Invoker":
+  host: "AWS"
+  size: "t2.micro"
+  purpose: "dev server"
+"Personal":
+  music: "spotify"
+  games: "CSGO, Dota 2"
+  podcasts: "Freakonomics, Planet Money, 99% Invisible"
+  books: "The Singularity Is Near"

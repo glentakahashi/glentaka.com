@@ -1,0 +1,122 @@
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+  #container {
+    width: 300px;
+    margin-top: 10px;
+  }
+  /*-------------------------------------------------------*/
+  /* Top Section */
+  /*-------------------------------------------------------*/
+  /* Logo */
+  #logo {
+    h2 {
+      font-size: 25px;
+      font-weight: 900;
+      color: #444;
+      line-height: 30px;
+    }
+    h4 {
+      color: #666;
+      line-height: 15px;
+    }
+  }
+  /* contact icons */
+  .contacticons {
+    margin-top: 9px;
+  }
+  .contact-text {
+    display: none;
+  }
+  /*-------------------------------------------------------*/
+  /* About Section */
+  /*-------------------------------------------------------*/
+  div.top {
+    height: 50px;
+    margin-bottom: 5px;
+  }
+  /* About */
+  .about {
+    width: 280px;
+    display: block;
+    min-height: 0;
+    margin: 10px 0 15px 10px;
+    .photo-inner {
+      margin-left: 40px;
+      background: url(../images/photo-inner.png) no-repeat;
+      width: 192px;
+      height: 212px;
+      padding: 12px 0 0 20px;
+    }
+    h1 {
+      line-height: 38px;
+      font-size: 30px;
+      text-align: center;
+    }
+    h3 {
+      font-size: 14px;
+      line-height: 14px;
+      text-align: center;
+    }
+    .summary {
+      text-align: center;
+    }
+  }
+  /* Personal info */
+  .personal-info {
+    margin-top: 0;
+    display: block;
+    min-height: 0;
+    margin-bottom: 15px;
+    width: 280px;
+    background: none;
+    border-top: 1px solid #fdc62a;
+    margin-left: 10px;
+    padding-left: 0;
+    li {
+      font-size: 13px;
+      span {
+        width: 200px;
+      }
+    }
+  }
+  /*-------------------------------------------------------*/
+  /* Menu */
+  /*-------------------------------------------------------*/
+  .tabs {
+    padding-left: 0px;
+    li {
+      > a {
+        width: 75px;
+        font-size: 14px;
+      }
+      &.active {
+        background: none;
+      }
+    }
+  }
+  /*-------------------------------------------------------*/
+  /* Resume */
+  /*-------------------------------------------------------*/
+  #resume {
+    padding: 10px;
+  }
+  .timeline-section {
+    width: 280px;
+    padding-right: 60px;
+  }
+  .skills-section {
+    width: 280px;
+  }
+  .skills li h4 {
+    width: 120px;
+  }
+  /*-------------------------------------------------------*/
+  /* Portfolio */
+  /*-------------------------------------------------------*/
+  #portfolio-list {
+    width: 280px;
+    li {
+      margin-left: 40px;
+    }
+  }
+}
