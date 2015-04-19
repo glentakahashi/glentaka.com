@@ -1,103 +1,91 @@
 jQuery(document).ready(function(){
 
-	/* ---------------------------------------------------------------------- */
-	/*	Custom Functions
-	/* ---------------------------------------------------------------------- */
+  /* ---------------------------------------------------------------------- */
+  /*  Custom Functions
+  /* ---------------------------------------------------------------------- */
 
-	// Needed variables
-	var $logo 	= $('#logo');
+  // Needed variables
+  var $logo = $('#logo');
 
-	// Show logo
-	$('.tab-resume,.tab-portfolio,.tab-contact').click(function() {
-	  $logo.fadeIn('slow');
-	});
-	// Hide logo
-	$('.tab-profile').click(function() {
-	  $logo.fadeOut('slow');
-	});
+  // Show logo
+  $('.tab-resume,.tab-portfolio,.tab-stack').click(function() {
+    $logo.fadeIn('slow');
+  });
+  // Hide logo
+  $('.tab-about').click(function() {
+    $logo.fadeOut('slow');
+  });
 
-	/* ---------------------------------------------------------------------- */
-	/*	Menu
-	/* ---------------------------------------------------------------------- */
+  // Show logo if landing on about page
+  var hash = window.location.hash.substr(1);
+  if(hash.length > 0 && hash != "about") {
+    $("#logo").show();
+  }
 
-	// Needed variables
-	var $content 		= $("#content");
+  /* ---------------------------------------------------------------------- */
+  /*  Menu
+  /* ---------------------------------------------------------------------- */
 
-	// Run easytabs
-  	$content.easytabs({
-	  animate			: true,
-	  updateHash		: true,
-	  transitionIn		:'slideDown',
-	  transitionOut		:'slideUp',
-	  animationSpeed	:600,
-	  tabs				:".tmenu",
-	  tabActiveClass	:'active',
-	});
+  // Needed variables
+  var $content = $("#content");
 
-	// Hover menu effect
-	$content.find('.tabs li a').hover(
-		function() {
-			$(this).stop().animate({ marginTop: "-7px" }, 200);
-		},function(){
-			$(this).stop().animate({ marginTop: "0px" }, 300);
-		}
-	);
-	/* ---------------------------------------------------------------------- */
-	/*	Portfolio
-	/* ---------------------------------------------------------------------- */
+  // Run easytabs
+  $content.easytabs({
+    animate         : true,
+    updateHash      : true,
+    transitionIn    :'slideDown',
+    transitionOut   :'slideUp',
+    animationSpeed  :600,
+    tabs            :".tmenu",
+    tabActiveClass  :'active',
+  });
 
-	// Needed variables
-	var $container	 	= $('#portfolio-list');
-	var $filter 		= $('#portfolio-filter');
+  // Hover menu effect
+  $content.find('.tabs li a').hover(
+      function() {
+        $(this).stop().animate({ marginTop: "-7px" }, 200);
+      },function(){
+        $(this).stop().animate({ marginTop: "0px" }, 300);
+      }
+      );
 
-	// Run Isotope
-	$container.isotope({
-		filter				: '*',
-		layoutMode   		: 'masonry',
-		animationOptions	: {
-		duration			: 750,
-		easing				: 'linear'
-	   }
-	});
+  /* ---------------------------------------------------------------------- */
+  /*  Portfolio
+  /* ---------------------------------------------------------------------- */
 
-	// Isotope Filter
-	$filter.find('a').click(function(){
-	  var selector = $(this).attr('data-filter');
-		$container.isotope({
-		filter				: selector,
-		animationOptions	: {
-		duration			: 750,
-		easing				: 'linear',
-		queue				: false,
-	   }
-	  });
-	  return false;
-	});
+  // Needed variables
+  var $container = $('#portfolio-list');
+  var $filter = $('#portfolio-filter');
 
-	// Portfolio image animation
-	$container.find('img').adipoli({
-		'startEffect' 	: 'transparent',
-		'hoverEffect' 	: 'boxRandom',
-		'imageOpacity' 	: 0.6,
-		'animSpeed' 	: 100,
-	});
+  // Run Isotope
+  $container.isotope({
+    filter            : '*',
+    layoutMode        : 'masonry',
+    animationOptions  : {
+      duration        : 750,
+      easing          : 'linear'
+    }
+  });
 
-	// Copy categories to item classes
-	$filter.find('a').click(function() {
-		var currentOption = $(this).attr('data-filter');
-		$filter.find('a').removeClass('current');
-		$(this).addClass('current');
-	});
+  // Isotope Filter
+  $filter.find('a').click(function(){
+    var selector = $(this).attr('data-filter');
+    $container.isotope({
+      filter            : selector,
+      animationOptions  : {
+        duration      : 750,
+        easing        : 'linear',
+        queue         : false,
+      }
+    });
+    return false;
+  });
 
-	/* ---------------------------------------------------------------------- */
-	/*	Fancybox
-	/* ---------------------------------------------------------------------- */
-	$container.find('.folio').fancybox({
-		'transitionIn'		:	'elastic',
-		'transitionOut'		:	'elastic',
-		'speedIn'			:	200,
-		'speedOut'			:	200,
-		'overlayOpacity'	:   0.6
-	});
+  // Copy categories to item classes
+  $filter.find('a').click(function() {
+    var currentOption = $(this).attr('data-filter');
+    $filter.find('a').removeClass('current');
+    $(this).addClass('current');
+  });
 
 });

@@ -1,55 +1,30 @@
+---
+#Jekyll front matter
+---
 <!DOCTYPE html>
 <html>
 <head>
 
 <title>Glen Takahashi</title>
-<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<link rel="stylesheet" type="text/css" href="css/reset.css"/>
-<link rel="stylesheet" type="text/css" href="css/style.css"/>
-<link rel="stylesheet" type="text/css" href="css/fancybox.css"/>
-<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,300,800,700,400italic|PT+Serif:400,400italic"/>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="author" content="Glen Takahashi">
+<meta name="description" content="{{ site.data.about.description }}">
+<meta name="keywords" content="{{ site.data.about.keywords }}">
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/fancybox.css">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,300,800,700,400italic|PT+Serif:400,400italic">
 
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-<script type="text/javascript" src="js/jquery.easytabs.min.js"></script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
-<script type="text/javascript" src="js/jquery.adipoli.min.js"></script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.pack.js"></script>
-<script type="text/javascript" src="js/jquery.isotope.min.js"></script>
-<script type="text/javascript" src="js/custom.js"></script>
-<!-- Unneeded scripts -->
-<!--
-        <script type="text/javascript" src="js/respond.min.js"></script>
-        <script type="text/javascript" src="js/jquery.fancybox-1.3.4.pack.js"></script>
-        <script type="text/javascript" src="js/jquery.min.js"></script>
-        <script type="text/javascript" src="js/jquery.gmap.min.js"></script>
-        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-    -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.easytabs/3.2.0/jquery.easytabs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.0/isotope.pkgd.min.js"></script>
+<script src="js/custom.js"></script>
+
 <!-- Google Analytics -->
-<script type="text/javascript">
-
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-38356560-1']);
-_gaq.push(['_trackPageview']);
-
-(function() {
- var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
- ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
- var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
- })();
-
-</script>
-
-<!-- Show the logo if landing on tab. -->
-<script type="text/javascript">
-$(document).ready(function() {
-  var hash = window.location.hash.substr(1);
-  if(hash.length > 0 && hash != "profile") {
-    $("#logo").show();
-  }
-});
-</script>
+{% include ga.html %}
+<!-- /Google Analytics -->
 
 </head>
 <body>
@@ -57,128 +32,93 @@ $(document).ready(function() {
 <div id="container">
 
   <!-- Top -->
-  <div class="top">
-    <!-- Logo -->
-    <div id="logo">
-      <h2>GLEN TAKAHASHI</h2>
-      <h4><a href="https://www.palantir.com">PALANTIR TECHNOLOGIES</a></h4>
-    </div>
-    <!-- /Logo -->
-
-    <!-- Social Icons -->
-    <ul class="contacticons">
-      <li><span class="contact-text">SOCIAL PROFILES</span></li>
-      <li><a href="http://www.linkedin.com/in/glentakahashi" class="contact-in" title="Linkedin"></a></li>
-      <li><a href="https://github.com/glentakahashi" class="contact-github" title="GitHub"></a></li>
-      <li><a href="http://blog.glentaka.com" class="contact-wordpress" title="Blog"></a></li>
-      <li><a href="https://www.facebook.com/takamahashi" class="contact-facebook" title="Facebook"></a></li>
-    </ul>
-    <!-- /Social Icons -->
-  </div>
+  {% include top.html %}
   <!-- /Top -->
 
   <!-- Content -->
   <div id="content" >
 
-    <!-- Profile -->
-    <div id="profile">
+    <!-- About -->
+    <div id="about">
       <!-- About section -->
       <div class="about">
-        <div class="photo-inner"><img src="images/photo.jpg" height="186" width="153" /></div>
+        <div class="photo-inner"><img src="{{ site.data.about.photo }}" height="186" width="153" /></div>
         <h1>GLEN TAKAHASHI</h1>
         <div class="summary">
-        Just graduated from UCLA and am currently <a href="http://wheresglen.com">travelling the world for 100 days.</a>
-        In July, I'll be moving to NYC and starting work for Palantir as a Forward Deployed Engineer.
+          {{ site.data.about.summary | markdownify }}
         </div>
       </div>
       <!-- /About section -->
 
       <!-- Personal info section -->
       <ul class="personal-info">
-        <li><label>Employer</label><span><a href="https://www.palantir.com">Palantir Technologies</a></span></li>
-        <li><label>Position</label><span>Forward Deployed Engineer</span></li>
-        <li><label>Education</label><span>UCLA Computer Science 2015</span></li>
-        <li><label>Age</label><span>21</span></li>
-        <li><label>Location</label><span>New York, NY</span></li>
-        <li><label>Email</label><span><a href="mailto:glen@glentaka.com">glen@glentaka.com</a></span></li>
+        {% for section in site.data.about.info %}
+        <li><label>{{ section[0] }}</label><span>{{ section[1] | markdownify }}</span></li>
+        {% endfor %}
       </ul>
       <!-- /Personal info section -->
     </div>
-    <!-- /Profile -->
+    <!-- /About -->
 
     <!-- Menu -->
     <div class="menu">
       <ul class="tabs">
-        <li class="tmenu"><a href="#profile" class="tab-profile">Profile</a></li>
+        <li class="tmenu"><a href="#about" class="tab-about">About</a></li>
         <li class="tmenu"><a href="#resume" class="tab-resume">Resume</a></li>
         <li class="tmenu"><a href="#portfolio" class="tab-portfolio">Portfolio</a></li>
-        <li class="tmenu"><a href="#more" class="tab-more">More</a></li>
+        <li class="tmenu"><a href="#stack" class="tab-stack">Stack</a></li>
       </ul>
     </div>
     <!-- /Menu -->
 
     <!-- Resume -->
     <div id="resume">
+      <div class="info-section">
+        <div class="links">
+          <div>
+            <div class="label">phone</div>
+            {{ site.data.about.phone }}
+          </div>
+          <div>
+            <div class="label">email</div>
+            <a href="mailto:{{ site.data.about.email }}">{{ site.data.about.email }}</a>
+          </div>
+          <div>
+            <div class="label">web</div>
+            <a href="{{ site.data.about.website }}">{{ site.data.about.website }}</a>
+          </div>
+          <div>
+            <div class="label">github</div>
+            <a href="{{ site.data.about.github }}">{{ site.data.about.github }}</a>
+          </div>
+          <div>
+            <div class="label">linkedin</div>
+            <a href="{{ site.data.about.linkedin }}">{{ site.data.about.linkedin }}</a>
+          </div>
+          <div>
+            <div class="label">facebook</div>
+            <a href="{{ site.data.about.facebook }}">{{ site.data.about.facebook }}</a>
+          </div>
+        </div>
+        <h1>Glen Takahashi</h1>
+      </div>
       <div class="timeline-section">
         <!-- Timeline for Employment  -->
         <h3 class="main-heading"><span>Employment</span></h3>
         <ul class="timeline">
+          {% for job in site.data.jobs %}
           <li>
           <div class="timelineUnit">
-            <h4>Forward Deployed Engineer<span class="timelineDate">Oct 2014 - Present</span></h4>
-            <h5><a href="https://www.palantir.com">Palantir Technologies</a></h5>
-            <!-- TODO: logos, use divs and float rights and stuff and width: percentages -->
-            <!-- TODO: add icons for the tech's that i used at each job -->
-            <!-- TODO: change More to be About. -->
-            <!-- TODO: add a new blog section that does tuff -->
+            <h4>{{ job.title }}<span class="timelineDate">{{ job.date }}</span></h4>
+            <h5>{{ job.employer | markdownify }}</h5>
             <ul>
+              {% for duty in job.duties %}
+              <li>{{ duty }}</li>
+              {% endfor %}
             </ul>
           </div>
           </li>
-
-          <li>
-          <div class="timelineUnit">
-            <h4>Forward Deployed Engineer Intern<span class="timelineDate">Jun 2014 - Oct 2014</span></h4>
-            <h5><a href="https://www.palantir.com">Palantir Technologies</a></h5>
-            <ul>
-              <li>Wrote a tool for managing and visualizing data pipelines</li>
-              <li>Created a web app for writing richly linked reports using a structured review process</li>
-            </ul>
-          </div>
-          </li>
-
-          <li>
-          <div class="timelineUnit">
-            <h4>System Administrator &amp; Developer<span class="timelineDate">Jan 2012 - Oct 2014</span></h4>
-            <h5><a href="http://www.simul8group.org">Simul8 Group</a></h5>
-            <ul>
-              <li>Created a website using asynchronous search to provide users with articles compiled from multiple databases</li>
-              <li>Managed servers, projects, and teams to improve stability and productivity</li>
-            </ul>
-          </div>
-          </li>
-
-          <li>
-          <div class="timelineUnit">
-            <h4>Software Engineering Intern<span class="timelineDate">Jun 2013 - Sept 2013</span></h4>
-            <h5><a href="https://www.palantir.com">Palantir Technologies</a></h5>
-            <ul>
-              <li>Investigated different MapReduce-esque technologies to improve performance over large datasets on machines</li>
-              <li>Began integrating said technologies into a new data processing platform</li>
-            </ul>
-          </div>
-          </li>
-
-          <li>
-          <div class="timelineUnit">
-            <h4>Software Engineering Intern<span class="timelineDate">June 2012 - Sept 2012</span></h4>
-            <h5><a href="https://www.adobe.com/">Adobe Systems Inc.</a></h5>
-            <ul>
-              <li>Designed and programmed an internal tool with wxPython to facilitate compiling and building Adobe Acrobat</li>
-              <li>Prototyped a new website in Django/HTML5 to demonstrate some unreleased features and their integration with websites in the cloud</li>
-            </ul>
-          </div>
-          </li>
+          {% endfor %}
         </ul>
         <!-- /Timeline for Employment  -->
 
@@ -187,9 +127,9 @@ $(document).ready(function() {
         <ul class="timeline">
           <li>
           <div class="timelineUnit">
-            <h4>B.S. Computer Science<span class="timelineDate">2011 - 2015</span></h4>
-            <h5>University of California, Los Angeles</h5>
-            GPA: 3.38
+            <h4>{{ site.data.education.degree }}<span class="timelineDate">{{ site.data.education.dates }}</span></h4>
+            <h5>{{ site.data.education.school }}</h5>
+            GPA: {{ site.data.education.GPA }}
           </div>
           </li>
           <div class="clear"></div>
@@ -198,197 +138,79 @@ $(document).ready(function() {
       </div>
       <div class="skills-section">
         <!-- Skills -->
-        <h3 class="main-heading"><span>Programming Languages</span></h3>
+        {% for category in site.data.skills %}
+        <h3 class="main-heading"><span>{{ category[0] }}</span></h3>
+        <ul class="skills">
+          {% for skill in category[1] %}
+          <li>
+          <h4>{{ skill[0] }}</h4>
+          <span class="rat{{ skill[1] }}"></span>
+          </li>
+          {% endfor %}
+        </ul>
+        {% endfor %}
         <h5 class="skills-note">Note: scores only represent personal comfort levels relative to each other</h5>
-        <ul class="skills">
-          <li>
-            <h4>Java</h4>
-            <span class="rat6"></span>
-          </li>
-          <li>
-            <h4>Coffeescript</h4>
-            <span class="rat6"></span>
-          </li>
-          <li>
-            <h4>Javascript</h4>
-            <span class="rat5"></span>
-          </li>
-          <li>
-            <h4>HTML5/CSS</h4>
-            <span class="rat5"></span>
-          </li>
-          <li>
-            <h4>C/C++</h4>
-            <span class="rat5"></span>
-          </li>
-          <li>
-            <h4>Python</h4>
-            <span class="rat4"></span>
-          </li>
-          <li>
-            <h4>Less</h4>
-            <span class="rat4"></span>
-          </li>
-          <li>
-            <h4>C#</h4>
-            <span class="rat3"></span>
-          </li>
-          <li>
-            <h4>Go</h4>
-            <span class="rat1"></span>
-          </li>
-        </ul>
-
-        <h3 class="main-heading"><span>Platforms</span></h3>
-        <ul class="skills">
-          <li>
-            <h4>jQuery</h4>
-            <span class="rat6"></span>
-          </li>
-          <li>
-            <h4>Backbone.js</h4>
-            <span class="rat5"></span>
-          </li>
-          <li>
-            <h4>Marionette</h4>
-            <span class="rat5"></span>
-          </li>
-          <li>
-            <h4>Android</h4>
-            <span class="rat4"></span>
-          </li>
-          <li>
-            <h4>d3.js</h4>
-            <span class="rat4"></span>
-          </li>
-          <li>
-            <h4>Django</h4>
-            <span class="rat4"></span>
-          </li>
-          <li>
-            <h4>Node.js</h4>
-            <span class="rat3"></span>
-          </li>
-        </ul>
-        <h3 class="main-heading"><span>Software</span></h3>
-        <ul class="skills">
-          <li>
-            <h4>Linux</h4>
-            <span class="rat7"></span>
-          </li>
-          <li>
-            <h4>Nginx</h4>
-            <span class="rat6"></span>
-          </li>
-          <li>
-            <h4>Git</h4>
-            <span class="rat6"></span>
-          </li>
-          <li>
-            <h4>Hadoop/Hive</h4>
-            <span class="rat5"></span>
-          </li>
-          <li>
-            <h4>Apache</h4>
-            <span class="rat4"></span>
-          </li>
-          <li>
-            <h4>PostgreSQL</h4>
-            <span class="rat4"></span>
-          </li>
-          <li>
-            <h4>Cassandra</h4>
-            <span class="rat3"></span>
-          </li>
-          <li>
-            <h4>Gradle</h4>
-            <span class="rat3"></span>
-          </li>
-          <li>
-            <h4>Elastic Search</h4>
-            <span class="rat2"></span>
-          </li>
-          <li>
-            <h4>SVN</h4>
-            <span class="rat2"></span>
-          </li>
-        </ul>
         <!-- /Skills -->
       </div>
       <div class="clear"></div>
-      <a href="//files.glentaka.com/Glen-Takahashi-CV.pdf" class="button">Download CV as PDF</a>
+      <div class="download">
+        <a download href="/files/Glen-Takahashi-Resume-CV.md"><img src="images/md.png" alt="md"></a>
+        <a download href="/files/Glen-Takahashi-Resume-CV.txt"><img src="images/txt.png" alt="txt"></a>
+        <!--<a download href="/files/Glen-Takahashi-Resume-CV.docx"><img src="images/docx.png" alt="docx"></a>-->
+        <a download href="/files/Glen-Takahashi-Resume-CV.pdf"><img src="images/pdf.png" alt="pdf"></a>
+        <a download href="/files/Glen-Takahashi-Resume-CV-A4.pdf"><img src="images/a4pdf.png" alt="a4pdf"></a>
+      </div>
     </div>
     <!-- /Resume -->
 
     <!-- Portfolio -->
     <div id="portfolio">
-
       <ul id="portfolio-filter">
         <li><a href="" class="current" data-filter="*">All</a></li>
-        <li><a href="" class="current" data-filter=".html5">HTML5</a></li>
-        <li><a href="" class="current" data-filter=".java">Java</a></li>
-        <li><a href="" class="current" data-filter=".nodejs">Node.js</a></li>
-        <li><a href="" class="current" data-filter=".python">Python</a></li>
-        <li><a href="" class="current" data-filter=".javascript">javascript</a></li>
-        <li><a href="" class="current" data-filter=".game">Games</a></li>
-        <!-- <li><a href="" data-filter=".animation">Animation</a></li> -->
+        {% for filter in site.data.portfolio.filters %}
+        <li><a href="" data-filter=".{{ filter[0] }}">{{ filter[1] }}</a></li>
+        {% endfor %}
       </ul>
-      <div class="extra-text">Some projects I'm proud of</div>
+      <div class="extra-text">Some Projects I've Worked On</div>
       <ul id="portfolio-list">
-        <li class="html5 nodejs javascript game">
-        <a href="http://blog.glentaka.com/2013/02/21/boxes/" title="Boxes, a multiplayer snake-like game." rel="portfolio">
-          <img src="portfolio/boxes-thumb.png" alt="Boxes game" />
-          <h2 class="title">Boxes</h2>
-          <span class="category">Node.js</span>
+        {% for post in site.posts %}
+        <li class="{% for tag in post.tags %}{{ tag }} {% endfor %}">
+        <a href="{{ post.url }}" title="{{ post.title }}" rel="portfolio">
+          <img src="images/portfolio/{{ post.thumb }}" alt="{{ post.title }}" />
+          <h2 class="title">{{ post.title }}</h2>
+          <span class="category">{{ post.subtitle }}</span>
         </a>
         </li>
-        <li class="java game">
-        <a href="http://blog.glentaka.com/2013/02/20/oishi-sushi-a-puzzle-game/" title="Oishi Sushi, a Java puzzle game" rel="portfolio">
-          <img src="portfolio/oishi-thumb.png" alt="Oishii Sushi game" />
-          <h2 class="title">Oishi Sushi</h2>
-          <span class="category">Java</span>
-        </a>
-        </li>
-        <li class="javascript">
-        <a href="http://blog.glentaka.com/2013/02/25/google-play-website-fix/" title="Google Play Fix" rel="portfolio">
-          <img src="portfolio/google-fix-thumb.png" alt="Google Play Fix" />
-          <h2 class="title">Google Play Fix</h2>
-          <span class="category">Greasemonkey</span>
-        </a>
-        </li>
-        <li class="python javascript jquery html5">
-        <a href="http://blog.glentaka.com/2013/02/25/ucla-article-search/" title="Article Search" rel="portfolio">
-          <img src="portfolio/article-search-thumb.png" alt="Article Search" />
-          <h2 class="title">Article Search</h2>
-          <span class="category">Website</span>
-        </a>
-        </li>
+        {% endfor %}
       </ul>
     </div>
     <!-- /Portfolio -->
 
-    <!-- More -->
-    <div id="more">
-      <!-- Contact Info -->
-      <div class="contact-info">
-        <h3 class="main-heading"><span>Contact info</span></h3>
-        <ul>
-          <li>Email: <a href="mailto:glen@glentaka.com">glen@glentaka.com</a></li>
-          <li>Skype: glentakahashi</li>
-          <li>Website: <a href="http://glentaka.com">glentaka.com</a></li>
-        </ul>
+    <!-- Stack -->
+    <div id="stack">
+      {% for system in site.data.stack %}
+      <h3><span>{{ system[0] }}</span></h3>
+      <div class="system">
+        {% for tool in system[1] %}
+        <div class="item">
+          <div class="tool">
+            {{ tool[0] }}
+          </div>
+          <div class="value">
+            {{ tool[1] | markdownify }}
+          </div>
+        </div>
+        {% endfor %}
       </div>
-      <!-- /Contact Info -->
+      {% endfor %}
     </div>
-    <!-- /More -->
+    <!-- /Stack -->
 
   </div>
   <!-- /Content -->
 
   <!-- Footer -->
-  <div class="footer">
-    <div class="copyright">Copyright © 2015 <a href="mailto:glen@glentaka.com">Glen Takahashi</a></div>
-  </div>
+  {% include footer.html %}
   <!-- /Footer -->
 
 </div>

@@ -1,0 +1,23 @@
+TODO:
+create print version of website
+  make a build script to go from pdf -> pdf in jekyll!! why be complex and make a latex resume, just have one source for your resume
+Finish writing posts for every project you've worked on:
+  fs-easymotion
+  dotfiles
+  smashcraft
+  solarsystem
+  glentaka.com
+  cardstack
+  custom counter
+  ratigon
+  cv
+update stacks + everything on linkedin
+for each job i've had:
+  logos, use divs and float rights and stuff and width: percentages
+  add icons or labels for the tech's that i used at each job
+
+improve README.md to be descriptive
+
+continuous integration
+git hook to automate deployment (maybe) http://jekyllrb.com/docs/deployment-methods/
+http://jekyllrb.com/docs/continuous-integration/

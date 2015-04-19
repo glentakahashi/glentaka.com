@@ -1,0 +1,57 @@
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  #container {
+    width: 750px;
+  }
+  /*------------------------------------------------------- */
+  /* Menu */
+  /*------------------------------------------------------- */
+  .tabs {
+    padding-left: 145px;
+  }
+  /*-------------------------------------------------------*/
+  /* About Section */
+  /*-------------------------------------------------------*/
+  /* About */
+  .about {
+    width: 410px;
+    h1 {
+      line-height: 32px;
+      font-size: 30px;
+    }
+    h3 {
+      font-size: 14px;
+      line-height: 14px;
+    }
+    .summary {
+      margin-top: 10px;
+    }
+  }
+  /* Personal info */
+  .personal-info {
+    width: 280px;
+    margin-right: 10px;
+    li span {
+      width: 190px;
+    }
+  }
+  /*-------------------------------------------------------*/
+  /* Resume */
+  /*-------------------------------------------------------*/
+  .timeline-section {
+    width: 380px;
+    padding-right: 30px;
+  }
+  .skills-section {
+    width: 300px;
+  }
+  /*-------------------------------------------------------*/
+  /* Portfolio */
+  /*-------------------------------------------------------*/
+  #portfolio-list {
+    width: 750px;
+    li {
+      margin-right: 60px;
+    }
+  }
+}

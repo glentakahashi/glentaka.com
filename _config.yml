@@ -1,0 +1,11 @@
+exclude: ["TODO", "Makefile", "README.md", "scss", "resume.html"]
+encoding: "utf-8"
+timezone: "America/New_York"
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "default"
+permalink: "/:title/"
