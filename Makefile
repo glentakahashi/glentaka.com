@@ -1,7 +1,10 @@
-all: jekyll pdf
+all: jekyll
 
 watch: dev
 	jekyll server
+
+uninstall:
+	rm -rf /var/www/glentaka.com/*
 
 install: all
 	cp -r _site/* /var/www/glentaka.com
