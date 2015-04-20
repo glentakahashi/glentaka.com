@@ -114,8 +114,8 @@
           {% for job in site.data.jobs %}
           <li>
           <div class="timelineUnit">
-            <h4>{{ job.title }}<span class="timelineDate">{{ job.date }}</span></h4>
-            <h5>{{ job.employer | markdownify }}</h5>
+            <h4><span class="timelineDate">{{ job.date }}</span>{{ job.employer | markdownify }}</h4>
+            <h5>{{ job.title }}</h5>
             <ul>
               {% for duty in job.duties %}
               <li>{{ duty }}</li>
