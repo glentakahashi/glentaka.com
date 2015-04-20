@@ -24,4 +24,7 @@ jQuery(document).ready(function(){
         $(this).stop().animate({ marginTop: "0px" }, 300);
       }
       );
+
+  // Scroll to post automatically
+   $('html, body').scrollTop($(".post").offset().top);
 });

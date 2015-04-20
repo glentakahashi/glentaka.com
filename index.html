@@ -85,22 +85,26 @@
           </div>
           <div>
             <div class="label">web</div>
-            <a href="{{ site.data.about.website }}">{{ site.data.about.website }}</a>
+            <a href="http://{{ site.data.about.website }}">{{ site.data.about.website }}</a>
           </div>
           <div>
             <div class="label">github</div>
-            <a href="{{ site.data.about.github }}">{{ site.data.about.github }}</a>
+            <a href="http://{{ site.data.about.github }}">{{ site.data.about.github }}</a>
           </div>
           <div>
             <div class="label">linkedin</div>
-            <a href="{{ site.data.about.linkedin }}">{{ site.data.about.linkedin }}</a>
+            <a href="http://{{ site.data.about.linkedin }}">{{ site.data.about.linkedin }}</a>
           </div>
           <div>
             <div class="label">facebook</div>
-            <a href="{{ site.data.about.facebook }}">{{ site.data.about.facebook }}</a>
+            <a href="http://{{ site.data.about.facebook }}">{{ site.data.about.facebook }}</a>
           </div>
         </div>
-        <h1>Glen Takahashi</h1>
+        <div class="title">
+          <h2>GLEN TAKAHASHI</h2>
+          <h4>Forward Deployed Engineer</h4>
+          <h4>Palantir Technologies</h4>
+        </div>
       </div>
       <div class="timeline-section">
         <!-- Timeline for Employment  -->
@@ -171,7 +175,6 @@
         <li><a href="" data-filter=".{{ filter[0] }}">{{ filter[1] }}</a></li>
         {% endfor %}
       </ul>
-      <div class="extra-text">Some Projects I've Worked On</div>
       <ul id="portfolio-list">
         {% for post in site.posts %}
         <li class="{% for tag in post.tags %}{{ tag }} {% endfor %}">
