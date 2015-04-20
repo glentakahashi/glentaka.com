@@ -387,12 +387,19 @@ div.top {
   .info-section {
     display: none;
     padding-bottom: 15px;
+    color: #333;
+    .title {
+      h2 {
+        font-size: 30px;
+        font-weight: 800;
+      }
+    }
     @media print {
       display: block;
     }
     overflow: auto;
     .links {
-      width: 300px;
+      width: 250px;
       float: right;
       text-align: right;
       line-height: 14px;
@@ -429,7 +436,7 @@ div.top {
       color: #444444;
       font-size: 13px;
       border-left: 1px solid #fadc66;
-      padding-left: 15px;
+      padding-left: 17px;
       .timelineDate {
         line-height: 17px;
         color: #f4c024;
@@ -541,7 +548,8 @@ div.top {
 #portfolio-filter {
   border-bottom: 1px solid #ededed;
   overflow: hidden;
-  padding: 15px 0;
+  padding: 15px 0 5px 0;
+  margin-bottom: 15px;
   li a {
     float: left;
     margin-right: 10px;
