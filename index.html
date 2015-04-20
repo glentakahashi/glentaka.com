@@ -52,6 +52,8 @@
 
       <!-- Personal info section -->
       <ul class="personal-info">
+        <li><label>Employer</label><span>{{ site.data.jobs[0].employer | markdownify }}</span></li>
+        <li><label>Position</label><span>{{ site.data.jobs[0].title }}</span></li>
         {% for section in site.data.about.info %}
         <li><label>{{ section[0] }}</label><span>{{ section[1] | markdownify }}</span></li>
         {% endfor %}
@@ -89,21 +91,21 @@
           </div>
           <div>
             <div class="label">github</div>
-            <a href="http://{{ site.data.about.github }}">{{ site.data.about.github }}</a>
+            <a href="https://{{ site.data.about.github }}">{{ site.data.about.github }}</a>
           </div>
           <div>
             <div class="label">linkedin</div>
-            <a href="http://{{ site.data.about.linkedin }}">{{ site.data.about.linkedin }}</a>
+            <a href="https://{{ site.data.about.linkedin }}">{{ site.data.about.linkedin }}</a>
           </div>
           <div>
             <div class="label">facebook</div>
-            <a href="http://{{ site.data.about.facebook }}">{{ site.data.about.facebook }}</a>
+            <a href="https://{{ site.data.about.facebook }}">{{ site.data.about.facebook }}</a>
           </div>
         </div>
         <div class="title">
           <h2>GLEN TAKAHASHI</h2>
-          <h4>Forward Deployed Engineer</h4>
-          <h4>Palantir Technologies</h4>
+          <h4>{{ site.data.jobs[0].title }}</h4>
+          <h4>{{ site.data.jobs[0].employer | markdownify }}</h4>
         </div>
       </div>
       <div class="timeline-section">
