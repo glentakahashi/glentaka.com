@@ -14,7 +14,7 @@
 <meta name="keywords" content="{{ site.data.about.keywords }}">
 <link rel="stylesheet" type="text/css" href="css/reset.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
-<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,300,800,700,400italic|PT+Serif:400,400italic">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300,800,700,400italic%7CPT+Serif:400,400italic">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.easytabs/3.2.0/jquery.easytabs.min.js"></script>
@@ -41,7 +41,7 @@
     <div id="about">
       <!-- About section -->
       <div class="about">
-        <div class="photo-inner"><img src="{{ site.data.about.photo }}" height="186" width="153" /></div>
+        <div class="photo-inner"><img src="{{ site.data.about.photo }}" height="186" width="153" alt="Glen Takahashi" /></div>
         <h1>GLEN TAKAHASHI</h1>
         <div class="summary">
           {{ site.data.about.summary | markdownify }}
@@ -51,10 +51,16 @@
 
       <!-- Personal info section -->
       <ul class="personal-info">
-        <li><label>Employer</label><span>{{ site.data.jobs[0].employer | markdownify }}</span></li>
+        <li><label>Employer</label><span>
+          {% if site.data.jobs[0].employerurl %}
+            <a href="{{ site.data.jobs[0].employerurl }}">{{ site.data.jobs[0].employer }}</a>
+          {% else %}
+            {{ site.data.jobs[0].employer }}
+          {% endif %}
+        </span></li>
         <li><label>Position</label><span>{{ site.data.jobs[0].title }}</span></li>
         {% for section in site.data.about.info %}
-        <li><label>{{ section[0] }}</label><span>{{ section[1] | markdownify }}</span></li>
+          <li><label>{{ section[0] }}</label><span>{{ section[1] | markdownify }}</span></li>
         {% endfor %}
       </ul>
       <!-- /Personal info section -->
@@ -104,7 +110,13 @@
         <div class="title">
           <h2>GLEN TAKAHASHI</h2>
           <h4>{{ site.data.jobs[0].title }}</h4>
-          <h4>{{ site.data.jobs[0].employer | markdownify }}</h4>
+          <h4>
+            {% if site.data.jobs[0].employerurl %}
+              <a href="{{ site.data.jobs[0].employerurl }}">{{ site.data.jobs[0].employer }}</a>
+            {% else %}
+              {{ site.data.jobs[0].employer }}
+            {% endif %}
+          </h4>
         </div>
       </div>
       <div class="timeline-section">
@@ -112,17 +124,26 @@
         <h3 class="main-heading"><span>Employment</span></h3>
         <ul class="timeline">
           {% for job in site.data.jobs %}
-          <li>
-          <div class="timelineUnit">
-            <h4><span class="timelineDate">{{ job.date }}</span>{{ job.employer | markdownify }}</h4>
-            <h5>{{ job.title }}</h5>
-            <ul>
-              {% for duty in job.duties %}
-              <li>{{ duty }}</li>
-              {% endfor %}
-            </ul>
-          </div>
-          </li>
+            <li>
+              <div class="timelineUnit">
+                <div class="timelineTitle">
+                  {% if job.employerurl %}
+                    <a href="{{ job.employerurl }}">{{ job.employer }}</a>
+                  {% else %}
+                    {{ job.employer }}
+                  {% endif %}
+                </div>
+                <div class="timelineDate">{{ job.date }}</div>
+                <div style="clear: both;"></div>
+                <div class="timelineSubtitle">{{ job.title }}</div>
+                <div class="timelineExtra">{{ job.location }}</div>
+                <ul>
+                  {% for duty in job.duties %}
+                    <li>{{ duty }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </li>
           {% endfor %}
         </ul>
         <!-- /Timeline for Employment  -->
@@ -130,31 +151,38 @@
         <!-- Timeline for Education  -->
         <h3 class="main-heading"><span>Education</span></h3>
         <ul class="timeline">
-          <li>
-          <div class="timelineUnit">
-            <h4>{{ site.data.education.degree }}<span class="timelineDate">{{ site.data.education.dates }}</span></h4>
-            <h5>{{ site.data.education.school }}</h5>
-            GPA: {{ site.data.education.GPA }}
-          </div>
-          </li>
-          <div class="clear"></div>
+          {% for school in site.data.education %}
+            <li>
+              <div class="timelineUnit">
+                <div class="timelineTitle">{{ school.degree }}</div>
+                <div class="timelineDate">{{ school.dates }}</div>
+                <div class="timelineSubtitle">{{ school.school }}</div>
+                <div class="timelineExtra">{{ school.extra }}</div>
+                <div style="clear: both;"></div>
+                <ul>
+                  {% for activity in school.activities %}
+                    <li>{{ activity | markdownify }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </li>
+          {% endfor %}
         </ul>
         <!-- /Timeline for Education  -->
       </div>
       <div class="skills-section">
         <!-- Skills -->
         {% for category in site.data.skills %}
-        <h3 class="main-heading"><span>{{ category[0] }}</span></h3>
-        <ul class="skills">
-          {% for skill in category[1] %}
-          <li>
-          <h4>{{ skill[0] }}</h4>
-          <span class="rat{{ skill[1] }}"></span>
-          </li>
-          {% endfor %}
-        </ul>
+          <h3 class="main-heading"><span>{{ category[0] }}</span></h3>
+          <ul class="skills">
+            {% for skill in category[1] %}
+              <li>
+                <h4>{{ skill[0] }}</h4>
+                <span class="rat{{ skill[1] }}"></span>
+              </li>
+            {% endfor %}
+          </ul>
         {% endfor %}
-        <h5 class="skills-note">Note: scores only represent personal comfort levels relative to each other</h5>
         <!-- /Skills -->
       </div>
       <div class="clear"></div>
@@ -173,18 +201,20 @@
       <ul id="portfolio-filter">
         <li><a href="" class="current" data-filter="*">All</a></li>
         {% for filter in site.data.portfolio.filters %}
-        <li><a href="" data-filter=".{{ filter[0] }}">{{ filter[1] }}</a></li>
+          <li><a href="" data-filter=".{{ filter[0] }}">{{ filter[1] }}</a></li>
         {% endfor %}
       </ul>
       <ul id="portfolio-list">
-        {% for post in site.posts %}
-        <li class="{% for tag in post.tags %}{{ tag }} {% endfor %}">
-        <a href="{{ post.url }}" title="{{ post.title }}" rel="portfolio">
-          <img src="images/portfolio/{{ post.thumb }}" alt="{{ post.title }}" />
-          <h2 class="title">{{ post.title }}</h2>
-          <span class="category">{{ post.subtitle }}</span>
-        </a>
-        </li>
+        {% for page in site.pages %}
+          {% if page.type == 'portfolio' %}
+          <li class="{% for tag in page.tags %}{{ tag }} {% endfor %}">
+            <a href="{{ page.url }}" title="{{ page.title }}">
+              <img src="images/portfolio/{{ page.thumb }}" alt="{{ page.title }}" />
+              <h2 class="title">{{ page.title }}</h2>
+              <span class="category">{{ page.subtitle }}</span>
+            </a>
+          </li>
+          {% endif %}
         {% endfor %}
       </ul>
     </div>
@@ -193,19 +223,19 @@
     <!-- Stack -->
     <div id="stack">
       {% for system in site.data.stack %}
-      <h3><span>{{ system[0] }}</span></h3>
-      <div class="system">
-        {% for tool in system[1] %}
-        <div class="item">
-          <div class="tool">
-            {{ tool[0] }}
-          </div>
-          <div class="value">
-            {{ tool[1] | markdownify }}
-          </div>
+        <h3 class="main-heading"><span>{{ system[0] }}</span></h3>
+        <div class="system">
+          {% for tool in system[1] %}
+            <div class="item">
+              <div class="tool">
+                {{ tool[0] }}
+              </div>
+              <div class="value">
+                {{ tool[1] | markdownify }}
+              </div>
+            </div>
+          {% endfor %}
         </div>
-        {% endfor %}
-      </div>
       {% endfor %}
     </div>
     <!-- /Stack -->

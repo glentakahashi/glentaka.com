@@ -1,5 +1,6 @@
 ---
 title: "UCLA Article Search"
+date: "2012 &ndash; 2014"
 subtitle: "Website"
 tags: ["javascript", "python", "jquery", "html5"]
 thumb: "article-search-thumb.png"

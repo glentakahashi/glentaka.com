@@ -1,5 +1,6 @@
 ---
 title: "Oishi Sushi"
+date: "Summer 2009"
 subtitle: "Puzzle Game"
 tags: ["java", "game"]
 thumb: "oishi-thumb.png"

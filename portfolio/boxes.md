@@ -1,5 +1,6 @@
 ---
 title: "Boxes!"
+date: "Summer 2011"
 subtitle: "node.js"
 tags: ["javascript", "html5", "node", "game"]
 thumb: "boxes-thumb.png"

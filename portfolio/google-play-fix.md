@@ -1,5 +1,6 @@
 ---
 title: "Google Play Website Fix"
+date: "December 2011"
 subtitle: "Greasemonkey"
 tags: ["javascript", "userscript"]
 thumb: "google-fix-thumb.png"

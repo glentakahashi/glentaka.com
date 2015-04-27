@@ -1,11 +1,10 @@
-exclude: ["TODO", "Makefile", "README.md", "scss", "resume.html"]
+exclude: ["TODO", "Makefile", "README.md"]
 encoding: "utf-8"
 timezone: "America/New_York"
 defaults:
   -
     scope:
-      path: ""
-      type: "posts"
+      path: "portfolio"
     values:
       layout: "default"
-permalink: "/:title/"
+      type: "portfolio"

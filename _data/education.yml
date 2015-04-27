@@ -1,4 +1,16 @@
-degree: "B.S. Computer Science"
-dates: "2011 - 2015"
-school: "University of California, Los Angeles"
-GPA: 3.38
+-
+  degree: "B.S. in Computer Science"
+  dates: "2011 &ndash; 2015"
+  school: "University of California, Los Angeles"
+  extra: "GPA: 3.38 / 4.0"
+  activities: [
+    "[UCLA Investment Society](http://uclainvestmentsociety.com)",
+    "[Upsilon Pi Epsilon](http://upe.seas.ucla.edu)"
+  ]
+-
+  degree: "High School"
+  dates: "2007 &ndash; 2011"
+  school: "Lynbrook High School"
+  extra: "GPA: 4.3 / 4.0"
+  activities: [
+  ]

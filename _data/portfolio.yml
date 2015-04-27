@@ -1,7 +1,13 @@
 filters:
-  html5: HTML5
-  java: Java
-  nodejs: Node.js
-  python: Python
-  javascript: Javascript
-  game: Games
+  html5: "HTML5"
+  java: "Java"
+  nodejs: "Node.js"
+  python: "Python"
+  javascript: "Javascript"
+  game: "Game"
+  android: "Android"
+  linux: "Linux"
+  website: "Website"
+  d3: "d3.js"
+  3d: "3D Graphics"
+  jekyll: "Jekyll"

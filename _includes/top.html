@@ -2,7 +2,13 @@
   <!-- Logo -->
   <div id="logo">
     <h2>GLEN TAKAHASHI</h2>
-    <h4>{{ site.data.jobs[0].employer | markdownify }}</h4>
+    <h4>
+      {% if site.data.jobs[0].employerurl %}
+        <a href="{{ site.data.jobs[0].employerurl }}">{{ site.data.jobs[0].employer }}</a>
+      {% else %}
+        {{ site.data.jobs[0].employer }}
+      {% endif %}
+    </h4>
   </div>
   <!-- /Logo -->
 

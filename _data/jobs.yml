@@ -1,36 +1,47 @@
 -
   title: "Forward Deployed Engineer"
-  date: "Oct 2014 - Present"
-  employer: "[Palantir Technologies](https://palantir.com)"
+  date: "Oct 2014 &ndash; Present"
+  employer: "Palantir Technologies"
+  employerurl: "https://palantir.com"
+  location: "New York, NY"
   duties: []
+  skills: []
 -
   title: "Forward Deployed Engineer Intern"
-  date: "Jun 2014 - Oct 2014"
-  employer: "[Palantir Technologies](https://palantir.com)"
+  date: "Jun 2014 &ndash; Oct 2014"
+  employer: "Palantir Technologies"
+  employerurl: "https://palantir.com"
+  location: "New York, NY"
   duties: [
     "Wrote a tool for managing and visualizing data pipelines",
     "Created a web app for writing richly linked reports using a structured review process"
     ]
 -
   title: "System Administrator &amp; Developer"
-  date: "Jan 2012 - Oct 2014"
-  employer: "[Simul8 Group](http://simul8group.org)"
+  date: "Jan 2012 &ndash; Nov 2014"
+  employer: "Simul8 Group"
+  employerurl: "http://simul8group.org"
+  location: "Los Angeles, CA"
   duties: [
     "Created a website using asynchronous search to provide users with articles compiled from multiple databases",
     "Managed servers, projects, and teams to improve stability and productivity"
     ]
 -
-  title: Software Engineering Intern
-  date: Jun 2013 - Sept 2013
-  employer: "[Palantir Technologies](https://palantir.com)"
+  title: "Software Engineering Intern"
+  date: "Jun 2013 &ndash; Sept 2013"
+  employer: "Palantir Technologies"
+  employerurl: "https://palantir.com"
+  location: "Palo Alto, CA"
   duties: [
     "Investigated different MapReduce-esque technologies to improve performance over large datasets on machines",
     "Began integrating said technologies into a new data processing platform"
     ]
 -
-  title: Software Engineering Intern
-  date: June 2012 - Sept 2012
-  employer: "[Adobe Systems Inc.](https://www.adobe.com)"
+  title: "Software Engineering Intern"
+  date: "June 2012 &ndash; Sept 2012"
+  employer: "Adobe Systems Inc."
+  employerurl: "https://www.adobe.com"
+  location: "San Jose, CA"
   duties: [
     "Designed and programmed an internal tool with wxPython to facilitate compiling and building Adobe Acrobat",
     "Prototyped a new website in Django/HTML5 to demonstrate some unreleased features and their integration with websites in the cloud"

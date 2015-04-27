@@ -100,6 +100,18 @@
   #resume {
     padding: 10px;
   }
+  .timeline li .timelineUnit {
+    .timelineTitle,.timelineSubtitle {
+      padding: 0;
+      float: none;
+      margin-left: 0;
+    }
+    .timelineDate,.timelineExtra {
+      text-align: left;
+      line-height: 18px;
+      font-size: 13px;
+    }
+  }
   .timeline-section {
     width: 280px;
     padding-right: 60px;

@@ -7,17 +7,9 @@
   browser: "chrome"
 "Custom PC":
   os: "Windows 7 Ultimate"
+  photos: "lightroom"
 "glentaka.com":
-  dns: "route 53"
-  server: "nginx"
-"Skywrath":
-  host: "linode"
-  size: "4096"
-  purpose: "primary host"
-"Invoker":
-  host: "AWS"
-  size: "t2.micro"
-  purpose: "dev server"
+  backend: "jekyll"
 "Personal":
   music: "spotify"
   games: "CSGO, Dota 2"
