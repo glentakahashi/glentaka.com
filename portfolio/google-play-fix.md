@@ -1,12 +1,13 @@
 ---
 title: "Google Play Website Fix"
 date: "December 2011"
-subtitle: "Greasemonkey"
-tags: ["javascript", "userscript"]
+updated: "February 23 2013"
+subtitle: "Greasemonkey Script"
+tags: ["hack"]
 thumb: "google-fix-thumb.png"
 ---
 
-![A screenshot of my fix on the old version of Google Play](/images/portfolio/google-fix.png)
+![My Patched Google Play Website]({{ page.pimg }}google-fix.png)
 
 Back in December of 2011, I re-installed my Android phone because like with my computers, I like to reformat my phone regularly to clear it out.
 When I started to install my apps again via the online interface at the time,
@@ -25,6 +26,7 @@ I uploaded my script to userscripts.org and linked it on all the websites where 
 Excited, I checked back a day later, and 20 people had installed my script! I was happy with myself,
 and I forgot about it until about a month ago when I decided to check my script again.
 My jaw nearly dropped when I found out that it had been installed over 10,000 times in the past year.
-That made me proud, and although the fix is no longer relevant because the new version of Google Play fixed the bug, you <span class="strikethrough">can see</span> used to be able to see my script at (the now defunct) [http://userscripts.org/scripts/show/120350](http://userscripts.org/scripts/show/120350)
+That made me proud, and although the fix is no longer relevant because the new version of Google Play fixed the bug,
+you used to be able to see my script at (the now defunct) [http://userscripts.org/scripts/show/120350](http://userscripts.org/scripts/show/120350)
 
-You can find my code online at [https://github.com/glentakahashi/android-market-fix](https://github.com/glentakahashi/android-market-fix)
+[Source Code](https://github.com/glentakahashi/android-market-fix)

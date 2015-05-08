@@ -1,17 +1,16 @@
 "Lenovo Thinkpad E420":
-  os: "Debian Testing"
+  os: "Debian Jessie"
   "window manager": "[cinnamon](http://cinnamon.linuxmint.com/)"
   editor: "vim"
   shell: "zsh"
   terminalstuff: "tmux"
+  configs: "[dotfiles](https://github.com/glentakahashi/dotfiles)"
   browser: "chrome"
+"Samsung s3":
+  os: "Cyanogenmod 11"
 "Custom PC":
   os: "Windows 7 Ultimate"
   photos: "lightroom"
-"glentaka.com":
-  backend: "jekyll"
 "Personal":
-  music: "spotify"
-  games: "CSGO, Dota 2"
-  podcasts: "Freakonomics, Planet Money, 99% Invisible"
-  books: "The Singularity Is Near"
+  podcasts: "Freakonomics, Planet Money, 99% Invisible, NPR"
+  "currently reading": "The Design of Everyday Things"

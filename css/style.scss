@@ -58,6 +58,10 @@ body {
   clear: both;
 }
 
+.strikethrough {
+  text-decoration: line-through;
+}
+
 /*------------------------------------------------------- */
 /* Typography */
 /*------------------------------------------------------- */
@@ -389,13 +393,20 @@ div.top {
     text-decoration: underline;
   }
   .info-section {
-    display: none;
+    /*display: none;*/
     padding-bottom: 15px;
     color: #333;
     .title {
       h2 {
         font-size: 30px;
         font-weight: 800;
+        margin-bottom: 5px;
+      }
+      h4 {
+        margin-bottom: 5px;
+      }
+      .update {
+        color: #999999;
       }
     }
     @media print {
@@ -403,6 +414,7 @@ div.top {
     }
     overflow: auto;
     .links {
+      margin-top: 5px;
       width: 250px;
       float: right;
       text-align: right;
@@ -680,21 +692,33 @@ div.top {
     font-size: 14px;
     color: #666666;
   }
+  .updated {
+    float: right;
+    font-size: 14px;
+    color: #666666;
+  }
   img {
     float: right;
     width: 45%;
-    margin-top: 15px;
     margin-left: 5px;
     margin-bottom: 5px;
     padding: 5px;
   }
-  p {
+  .content {
     color: #666666;
     line-height: 18px;
     margin-bottom: 15px;
+    ol {
+      list-style-type: decimal;
+      padding-left: 25px;
+      margin-bottom: 15px;
+    }
+    p {
+      margin-bottom: 15px;
+    }
   }
   a {
-    color: #333333;
+    color: #111111;
     &:hover {
       text-decoration: underline;
     }

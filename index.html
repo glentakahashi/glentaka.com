@@ -92,7 +92,7 @@
           </div>
           <div>
             <div class="label">web</div>
-            <a href="http://{{ site.data.about.website }}">{{ site.data.about.website }}</a>
+            <a href="https://{{ site.data.about.website }}">{{ site.data.about.website }}</a>
           </div>
           <div>
             <div class="label">github</div>
@@ -117,6 +117,7 @@
               {{ site.data.jobs[0].employer }}
             {% endif %}
           </h4>
+          <div class="update">Updated {{ site.data.about.updated }}</div>
         </div>
       </div>
       <div class="timeline-section">
@@ -134,7 +135,7 @@
                   {% endif %}
                 </div>
                 <div class="timelineDate">{{ job.date }}</div>
-                <div style="clear: both;"></div>
+                <div class="clear"></div>
                 <div class="timelineSubtitle">{{ job.title }}</div>
                 <div class="timelineExtra">{{ job.location }}</div>
                 <ul>
@@ -158,7 +159,7 @@
                 <div class="timelineDate">{{ school.dates }}</div>
                 <div class="timelineSubtitle">{{ school.school }}</div>
                 <div class="timelineExtra">{{ school.extra }}</div>
-                <div style="clear: both;"></div>
+                <div class="clear"></div>
                 <ul>
                   {% for activity in school.activities %}
                     <li>{{ activity | markdownify }}</li>
@@ -187,11 +188,11 @@
       </div>
       <div class="clear"></div>
       <div class="download">
-        <a download href="/files/Glen-Takahashi-Resume-CV.md"><img src="images/md.png" alt="md"></a>
-        <a download href="/files/Glen-Takahashi-Resume-CV.txt"><img src="images/txt.png" alt="txt"></a>
-        <!--<a download href="/files/Glen-Takahashi-Resume-CV.docx"><img src="images/docx.png" alt="docx"></a>-->
-        <a download href="/files/Glen-Takahashi-Resume-CV.pdf"><img src="images/pdf.png" alt="pdf"></a>
-        <a download href="/files/Glen-Takahashi-Resume-CV-A4.pdf"><img src="images/a4pdf.png" alt="a4pdf"></a>
+        <a download href="/files/Glen-Takahashi-Resume-CV.md"><img src="/images/md.png" alt="md"></a>
+        <a download href="/files/Glen-Takahashi-Resume-CV.txt"><img src="/images/txt.png" alt="txt"></a>
+        <!--<a download href="/files/Glen-Takahashi-Resume-CV.docx"><img src="/images/docx.png" alt="docx"></a>-->
+        <a download href="/files/Glen-Takahashi-Resume-CV.pdf"><img src="/images/pdf.png" alt="pdf"></a>
+        <a download href="/files/Glen-Takahashi-Resume-CV-A4.pdf"><img src="/images/a4pdf.png" alt="a4pdf"></a>
       </div>
     </div>
     <!-- /Resume -->
@@ -205,11 +206,12 @@
         {% endfor %}
       </ul>
       <ul id="portfolio-list">
+        {% assign self = page %}
         {% for page in site.pages %}
           {% if page.type == 'portfolio' %}
           <li class="{% for tag in page.tags %}{{ tag }} {% endfor %}">
             <a href="{{ page.url }}" title="{{ page.title }}">
-              <img src="images/portfolio/{{ page.thumb }}" alt="{{ page.title }}" />
+              <img src="{{ self.pimg }}{{ page.thumb }}" alt="{{ page.title }}" />
               <h2 class="title">{{ page.title }}</h2>
               <span class="category">{{ page.subtitle }}</span>
             </a>

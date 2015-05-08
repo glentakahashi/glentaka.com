@@ -4,6 +4,11 @@ timezone: "America/New_York"
 defaults:
   -
     scope:
+      path: ""
+    values:
+      pimg: "/portfolio/images/"
+  -
+    scope:
       path: "portfolio"
     values:
       layout: "default"

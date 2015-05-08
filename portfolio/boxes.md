@@ -1,44 +1,55 @@
 ---
 title: "Boxes!"
 date: "Summer 2011"
-subtitle: "node.js"
-tags: ["javascript", "html5", "nodejs", "game"]
+updated: "May 7 2015"
+subtitle: "Multiplayer HTML5/node.js Game"
+tags: ["website", "game", "backend"]
 thumb: "boxes-thumb.png"
 ---
 
-![A screenshot of the Boxes game](/images/portfolio/boxes.png)
+![Boxes Gameplay]({{ page.pimg }}boxes.png)
 
-One weekend during the summer of 2011, I thought to myself "I should learn HTML5..." So, I started on a project that would turn into more than I expected.
+One weekend during the summer of 2011 with nothing better to do, I thought to myself "I should learn HTML5..."
+Naturally, this started a project that would turn into much more than I had originally hoped.
 
-Because I really wanted to learn how everything worked, I basically started from scratch.
-I started out by creating a simple HTML5 webpage that would draw a box on a Canvas.
+Because the main goal of my project was to learn, I started making a website from scratch.
+First I created a simple HTML5 page that would draw a box on a Canvas.
 Then, I figured out how to make the box move with JavaScript.
-Fancy, I know.
-For some reason, when I get to the point where I can see things moving and working, I usually get sucked in; this was no exception.
-Soon came multiple boxes moving, and patterns came next, until I was having so much fun just doodling around I forgot that I was trying to write good code.
 
-Once I got all the fiddling around out of my system, I took a step back and starting to refactor my code.
+With every project I've ever worked on, there is a point of no return where I fall into a trance of coding; this was no exception.
+Once I had a box moving around the screen, something kicked off in my brain and ideas started flowing like a dam had just broken.
+Soon came multiple boxes, boxes moving in patterns, boxes of different sizes, etc.
+Eventually, I was having so much fun just doodling around that I forgot that I was trying to write good code.
+
+Once I got the fiddling out of my system, I took a step back and starting to refactor my code.
 I made a box class, created update and paint loops, and cleaned up a lot of functions.
-Then, I started to think about what I could actually do with this, and I decided that I could probably make a game out of this.
-The most logical course of action was to create a snake-like game, because who doesn't know snake?
-I figured out how use JavaScript to use my arrow keys as controls, and added in trailing boxes and dots to the game.
-Eventually, I had a game.
+With this new platform, the possibilities started growing and I decided that I could probably make a game with boxes.
+The most logical course of action was to create a snake-like game, because of the simplicity and the fact that everybody knows snake.
+I figured out how use JavaScript to use my arrow keys as controls, and added in trailing boxes and "apples" to the page.
+Eventually, I had a game. I called it Boxes.
 
-After that, my mind wandered to other things and I thought that I could do more, and make it multiplayer.
-I thought "I should learn Node.js, that's been all the rage these days...", so I did.
-I downloaded Node.js and started looking up tutorials that would help me stream data between computers realtime.
-I decided to use websockets, so I settled on socket.io and started to work.
-At first, I used a simple method of every computer simply broadcasting its x,y location,
+At this point, I probably could have concluded my endeavors a success,
+but like most engineers I was already thinking about V2 before I had even finished V1.
+
+Version 2 was going to be multiplayer, but I had no idea how to achieve that.
+Since the main goal was to learn some new technologies, I decided to continue the trend and look up what
+this new "node.js" thing was that people were raving about.
+I downloaded node.js and started looking up tutorials that would help me stream data between clients in real-time.
+I decided to use websockets after reading about them online, so I settled on socket.io and started to work.
+
+At first, I used a simple method of every computer simply broadcasting its player's snake location,
 but after a few of my clever friends figured out how to abuse that, I implemented cheat detection.
-The server would process all of the data instead of the client, so even if a client said that it had moved to the ball,
-the server would detect if it moved too fast or jumped locations.
-Finally, after a little tweaking I had my game.
+The server would process all of the data instead of the client, so even if a client modified the code to move in super-speed or to teleport,
+the server would detect if the moves were illegal and kick them if they were.
+With everything finally in place, I tested the game out with my friends and everybody had a blast.
+Something about how I programmed the physics and controls made it the perfect balance of fun, luck, and skill.
+To this day, whenever I show my friends Boxes, it usually ends up with 15 minutes of distraction.
 
-Now, if we jump to current day, I wanted to put my game somewhere hosted that wasn't my local 8 year old webserver, so I looked up node.js hosting.
-Finally, I found one I liked, Heroku, I deployed my app and found out that it doesn't actually support websockets.
-Searching around some more, I found no suitable alternatives that support websockets, so I launched my own instance of Amazon EC2, and manually ran it there.
+Once completed, I wanted to host my game somewhere that wasn't my 8 year old Compaq desktop sitting in my closet, so I looked up node.js hosting.
+Finally, I settled on Heroku, but I deployed my app and found out that Heroku didn't actually support websockets.
+Searching around some more, I found no suitable alternatives that supported websockets, so I launched my own instance on Amazon EC2, and hosted it there.
 Voila!
 
-To play Boxes, visit my website [http://boxes.glentaka.com](http://boxes.glentaka.com)
+To play Boxes today, visit my website [http://boxes.glentaka.com](http://boxes.glentaka.com)
 
-For those who want to see my source code and how I did it, go to [http://github.com/glentakahashi/boxes](http://github.com/glentakahashi/boxes)
+[Source Code](https://github.com/glentakahashi/boxes)

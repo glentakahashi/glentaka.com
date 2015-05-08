@@ -44,8 +44,12 @@
     <!-- Post -->
     <div class="post">
       <div class="title">{{ page.title }}</div>
+      {% if page.updated %}
+        <div class="updated">Updated {{ page.updated }}</div>
+      {% endif %}
       <div class="date">{{ page.date }}</div>
-      {{ content }}
+      <div class="content">{{ content }}</div>
+      <div class="clear"></div>
     </div>
     <!-- /Post -->
 
