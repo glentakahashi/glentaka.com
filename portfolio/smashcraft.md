@@ -11,4 +11,6 @@ thumb: "smashcraft-thumb.png"
 
 Smashcraft is a game created with Steven La, Sarah Wong, Alexander Ramirez for the Computer Graphics class at UCLA.
 
+[Play Smashcraft](http://smashcraft.co)
+
 [Source Code](https://github.com/glentakahashi/smashcraft)
