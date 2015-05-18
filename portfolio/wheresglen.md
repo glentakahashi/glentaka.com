@@ -16,7 +16,7 @@ He told me that his friends and family were always asking where he was on his tr
 [website](http://whereispulkit.com) that allowed them to track where he was in real-time.
 
 I thought this was a brilliant and useful idea, so naturally I wanted to do the same for my own trip.
-Unfortunately, because I was travelling internationally, my service was spotty and
+Unfortunately, because I was traveling internationally, my service was spotty and
 I didn't have the luxury of being able to constantly charge my phone via a car charger.
 This meant that his open-source code and most other conventional methods of constant location reporting to a web service would be unpractical.
 Luckily, I found an alternative solution to economically get my location by using the already-active Google Location History tied to my phone.

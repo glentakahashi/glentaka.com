@@ -18,3 +18,5 @@ http://jekyllrb.com/docs/continuous-integration/
 "Every good idea starts with a story..."
 
 Make a git hook that will automatically update "update" frontmatter on affected files based on git commit date
+
+make links more visible
