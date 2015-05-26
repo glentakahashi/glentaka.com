@@ -19,4 +19,6 @@ http://jekyllrb.com/docs/continuous-integration/
 
 Make a git hook that will automatically update "update" frontmatter on affected files based on git commit date
 
-make links more visible
+make links more visible (underline them? different color? bold?)
+
+add physical address to readme
