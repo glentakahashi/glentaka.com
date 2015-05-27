@@ -1,7 +1,7 @@
 ---
 title: "Where's Glen"
 date: "2015 - Present"
-updated: "May 8 2015"
+updated: "May 27 2015"
 subtitle: "Realtime Travel Tracker"
 tags: ["website", "backend"]
 thumb: "wheresglen-thumb.png"
@@ -35,6 +35,8 @@ How it works is a node.js script running on an hourly basis that does 4 things.
 
 In the end, I had a workable project that allowed me to automatically update my location.
 The code still needs work, but I'll leave that task for when I get back from my travels.
-For now, you can see my trip history at [http://wheresglen.com](http://wheresglen.com)
+For now, you can see my trip history and source code below.
+
+[http://wheresglen.com](http://wheresglen.com)
 
 [Source Code](https://github.com/glentakahashi/wheresglen.com)

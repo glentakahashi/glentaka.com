@@ -608,20 +608,15 @@ div.top {
     &:hover {
       border-bottom: 1px solid #fdc62a;
       height: 185px;
+      img {
+        opacity: 1;
+      }
     }
-  }
-  img {
-    background-color: white;
-    height: 120px;
-    width: 180px;
-    opacity: 0.6;
-    &:hover {
-      opacity: 1;
-    }
-  }
-  li {
-    &:hover .title {
-      color: #fdc62a;
+    img {
+      background-color: white;
+      height: 120px;
+      width: 180px;
+      opacity: 0.6;
     }
     .title {
       font-size: 14px;
@@ -633,6 +628,10 @@ div.top {
       font-size: 11px;
       line-height: 25px;
       color: #999999;
+    }
+    a {
+      display: block;
+      height: 100%;
     }
   }
 }
