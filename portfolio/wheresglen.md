@@ -1,7 +1,7 @@
 ---
 title: "Where's Glen"
-date: "2015 - Present"
-updated: "May 27 2015"
+date: "March 2015 - Present"
+updated: "June 2 2015"
 subtitle: "Realtime Travel Tracker"
 tags: ["website", "backend"]
 thumb: "wheresglen-thumb.png"

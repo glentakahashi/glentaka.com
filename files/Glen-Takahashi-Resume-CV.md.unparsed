@@ -3,26 +3,30 @@
 permalink: /files/Glen-Takahashi-Resume-CV.md
 ---
 #Glen Takahashi
-###phone: {{ site.data.about.phone }}
-###email: [{{ site.data.about.email }}](mailto:{{ site.data.about.email }})
-###website: [{{ site.data.about.website }}]({{ site.data.about.website }})
-###github: [{{ site.data.about.github }}]({{ site.data.about.github }})
+phone: {{ site.data.about.phone }}  
+email: [{{ site.data.about.email }}](mailto:{{ site.data.about.email }})  
+website: [{{ site.data.about.website }}](https://{{ site.data.about.website }})  
+github: [{{ site.data.about.github }}](https://{{ site.data.about.github }})  
+linkedin: [{{ site.data.about.linkedin }}](https://{{ site.data.about.linkedin }})  
+facebook: [{{ site.data.about.facebook }}](https://{{ site.data.about.facebook }})
 
 ##Employment
 {% for job in site.data.jobs %}
-###{{ job.title }}
-####{{ job.date }}
-####{{ job.employer }}
+**{{ job.title }}**  
+{{ job.date }}  
+[{{ job.employer }}]({{ job.employerurl }})
 {% for duty in job.duties %}* {{ duty }}
 {% endfor %}{% endfor %}
 ##Education
-###{{ site.data.education.degree }}
-###{{ site.data.education.dates }}
-###{{ site.data.education.school }}
-#### GPA: {{ site.data.education.GPA }}
-
+{% for school in site.data.education %}
+**{{ school.school }}**  
+{{ school.degree }}  
+{{ school.dates }}  
+{{ school.extra }}
+{% for activity in school.activities %}  * [{{ activity[0] }}]({{ activity[1] }})
+{% endfor %}{% endfor %}
 ##Skills
-####Note: Scores are out of 7
+**Note: Scores are out of 7**
 {% for category in site.data.skills %}
 ###{{ category[0] }}
 {% for skill in category[1] %}  * {{ skill[0] }}: {{ skill[1] }}

@@ -1,6 +1,6 @@
 ---
 title: "UCLA Article Search"
-date: "2012 &ndash; 2014"
+date: "2012 - 2014"
 updated: "April 29 2015"
 subtitle: "School Website"
 tags: ["website", "backend"]

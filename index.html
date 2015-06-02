@@ -58,13 +58,9 @@
       <!-- Personal info section -->
       <ul class="personal-info">
         <li><label>Employer</label><span>
-          {% if site.data.jobs[0].employerurl %}
-            <a href="{{ site.data.jobs[0].employerurl }}">{{ site.data.jobs[0].employer }}</a>
-          {% else %}
-            {{ site.data.jobs[0].employer }}
-          {% endif %}
+          <a href="{{ site.data.jobs[0].employerurl }}">{{ site.data.jobs[0].employer }}</a>
         </span></li>
-        <li><label>Position</label><span>{{ site.data.jobs[0].title }}</span></li>
+        <li><label>Position</label><span>{{ site.data.jobs[0].title | escape }}</span></li>
         {% for section in site.data.about.info %}
           <li><label>{{ section[0] }}</label><span>{{ section[1] | markdownify }}</span></li>
         {% endfor %}
@@ -114,14 +110,10 @@
           </div>
         </div>
         <div class="title">
-          <h2>GLEN TAKAHASHI</h2>
-          <h4>{{ site.data.jobs[0].title }}</h4>
+          <h2><a href="https://{{ site.data.about.website }}">GLEN TAKAHASHI</a></h2>
+          <h4>{{ site.data.jobs[0].title | escape }}</h4>
           <h4>
-            {% if site.data.jobs[0].employerurl %}
-              <a href="{{ site.data.jobs[0].employerurl }}">{{ site.data.jobs[0].employer }}</a>
-            {% else %}
-              {{ site.data.jobs[0].employer }}
-            {% endif %}
+            <a href="{{ site.data.jobs[0].employerurl }}">{{ site.data.jobs[0].employer }}</a>
           </h4>
           <div class="update">Updated {{ site.data.about.updated }}</div>
         </div>
@@ -134,15 +126,11 @@
             <li>
               <div class="timelineUnit">
                 <div class="timelineTitle">
-                  {% if job.employerurl %}
-                    <a href="{{ job.employerurl }}">{{ job.employer }}</a>
-                  {% else %}
-                    {{ job.employer }}
-                  {% endif %}
+                  <a href="{{ job.employerurl }}">{{ job.employer }}</a>
                 </div>
                 <div class="timelineDate">{{ job.date }}</div>
                 <div class="clear"></div>
-                <div class="timelineSubtitle">{{ job.title }}</div>
+                <div class="timelineSubtitle">{{ job.title | escape }}</div>
                 <div class="timelineExtra">{{ job.location }}</div>
                 <ul>
                   {% for duty in job.duties %}
@@ -168,7 +156,7 @@
                 <div class="clear"></div>
                 <ul>
                   {% for activity in school.activities %}
-                    <li>{{ activity | markdownify }}</li>
+                    <li><a href="{{ activity[1] }}">{{ activity[0] }}</a></li>
                   {% endfor %}
                 </ul>
               </div>

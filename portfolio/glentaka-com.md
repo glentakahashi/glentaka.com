@@ -1,6 +1,6 @@
 ---
 title: "glentaka.com"
-date: "2013 &ndash; present"
+date: "2013 - present"
 updated: "May 8 2015"
 subtitle: "Personal Website"
 tags: ["website"]
