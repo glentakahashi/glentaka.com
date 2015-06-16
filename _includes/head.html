@@ -1,0 +1,39 @@
+<title>{% if page.title %}{{ page.title }} - Glen Takahashi{% else %}{{ site.title }}{% endif %}</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="{{ site.data.about.description }}">
+
+<!-- Opengraph Metadata -->
+<meta property="og:title" content="{{ site.data.about.title }}">
+<meta property="og:description" content="{{ site.data.about.description }}">
+<meta property="og:image" content="{{ site.data.about.image }}">
+<meta property="og:type" content="{{ site.data.about.type }}">
+<meta property="og:url" content="{{ site.data.about.url }}">
+
+<link rel="stylesheet" type="text/css" href="/css/reset.css">
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300,800,700,400italic%7CPT+Serif:400,400italic">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.easytabs/3.2.0/jquery.easytabs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.0/isotope.pkgd.min.js"></script>
+{% if page.type == 'portfolio' %}
+<script src="/js/custom-post.js"></script>
+{% else %}
+<script src="/js/custom.js"></script>
+{% endif %}
+
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-38356560-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+ })();
+
+</script>

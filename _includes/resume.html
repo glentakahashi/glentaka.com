@@ -1,0 +1,109 @@
+<!-- Resume -->
+<div id="resume">
+  <div class="info-section">
+    <div class="links">
+      <div>
+        <div class="label">phone</div>
+        {{ site.data.about.phone }}
+      </div>
+      <div>
+        <div class="label">email</div>
+        <a href="mailto:{{ site.data.about.email }}">{{ site.data.about.email }}</a>
+      </div>
+      <div>
+        <div class="label">web</div>
+        <a href="https://{{ site.data.about.website }}">{{ site.data.about.website }}</a>
+      </div>
+      <div>
+        <div class="label">github</div>
+        <a href="https://{{ site.data.about.github }}">{{ site.data.about.github }}</a>
+      </div>
+      <div>
+        <div class="label">linkedin</div>
+        <a href="https://{{ site.data.about.linkedin }}">{{ site.data.about.linkedin }}</a>
+      </div>
+      <div>
+        <div class="label">facebook</div>
+        <a href="https://{{ site.data.about.facebook }}">{{ site.data.about.facebook }}</a>
+      </div>
+    </div>
+    <div class="title">
+      <h2><a href="https://{{ site.data.about.website }}">GLEN TAKAHASHI</a></h2>
+      <h4>{{ site.data.jobs[0].title | escape }}</h4>
+      <h4>
+        <a href="{{ site.data.jobs[0].employerurl }}">{{ site.data.jobs[0].employer }}</a>
+      </h4>
+      <div class="update">Updated {{ site.data.about.updated }}</div>
+    </div>
+  </div>
+  <div class="timeline-section">
+    <!-- Timeline for Employment  -->
+    <h3 class="main-heading"><span>Employment</span></h3>
+    <ul class="timeline">
+      {% for job in site.data.jobs %}
+        <li>
+          <div class="timelineUnit">
+            <div class="timelineTitle">
+              <a href="{{ job.employerurl }}">{{ job.employer }}</a>
+            </div>
+            <div class="timelineDate">{{ job.date }}</div>
+            <div class="clear"></div>
+            <div class="timelineSubtitle">{{ job.title | escape }}</div>
+            <div class="timelineExtra">{{ job.location }}</div>
+            <ul>
+              {% for duty in job.duties %}
+                <li>{{ duty }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+    <!-- /Timeline for Employment  -->
+
+    <!-- Timeline for Education  -->
+    <h3 class="main-heading"><span>Education</span></h3>
+    <ul class="timeline">
+      {% for school in site.data.education %}
+        <li>
+          <div class="timelineUnit">
+            <div class="timelineTitle">{{ school.degree }}</div>
+            <div class="timelineDate">{{ school.dates }}</div>
+            <div class="timelineSubtitle">{{ school.school }}</div>
+            <div class="timelineExtra">{{ school.extra }}</div>
+            <div class="clear"></div>
+            <ul>
+              {% for activity in school.activities %}
+                <li><a href="{{ activity[1] }}">{{ activity[0] }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+    <!-- /Timeline for Education  -->
+  </div>
+  <div class="skills-section">
+    <!-- Skills -->
+    {% for category in site.data.skills %}
+      <h3 class="main-heading"><span>{{ category[0] }}</span></h3>
+      <ul class="skills">
+        {% for skill in category[1] %}
+          <li>
+            <h4>{{ skill[0] }}</h4>
+            <span class="rat{{ skill[1] }}"></span>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+    <!-- /Skills -->
+  </div>
+  <div class="clear"></div>
+  <div class="download">
+    <a download href="/files/Glen-Takahashi-Resume-CV.md"><img src="/images/md.png" alt="md"></a>
+    <a download href="/files/Glen-Takahashi-Resume-CV.txt"><img src="/images/txt.png" alt="txt"></a>
+    <a download href="/files/Glen-Takahashi-Resume-CV.pdf"><img src="/images/pdf.png" alt="pdf"></a>
+    <a download href="/files/Glen-Takahashi-Resume-CV-A4.pdf"><img src="/images/a4pdf.png" alt="a4pdf"></a>
+  </div>
+</div>
+<!-- /Resume -->

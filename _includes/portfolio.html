@@ -1,0 +1,24 @@
+<!-- Portfolio -->
+<div id="portfolio">
+  <ul id="portfolio-filter">
+    <li><a href="" class="current" data-filter="*">All</a></li>
+    {% for filter in site.data.portfolio.filters %}
+      <li><a href="" data-filter=".{{ filter[0] }}">{{ filter[1] }}</a></li>
+    {% endfor %}
+  </ul>
+  <ul id="portfolio-list">
+    {% assign self = page %}
+    {% for page in site.pages %}
+      {% if page.type == 'portfolio' %}
+      <li class="{% for tag in page.tags %}{{ tag }} {% endfor %}">
+        <a href="{{ page.url }}" title="{{ page.title }}">
+          <img src="{{ self.pimg }}{{ page.thumb }}" alt="{{ page.title }}" />
+          <h2 class="title">{{ page.title }}</h2>
+          <span class="category">{{ page.subtitle }}</span>
+        </a>
+      </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>
+<!-- /Portfolio -->

@@ -1,0 +1,25 @@
+<!-- About -->
+<div id="about">
+  <!-- About section -->
+  <div class="about">
+    <div class="photo-inner"><img src="{{ site.data.about.photo }}" height="186" width="153" alt="Glen Takahashi" /></div>
+    <h1>GLEN TAKAHASHI</h1>
+    <div class="summary">
+      {{ site.data.about.summary | markdownify }}
+    </div>
+  </div>
+  <!-- /About section -->
+
+  <!-- Personal info section -->
+  <ul class="personal-info">
+    <li><label>Employer</label><span>
+      <a href="{{ site.data.jobs[0].employerurl }}">{{ site.data.jobs[0].employer }}</a>
+    </span></li>
+    <li><label>Position</label><span>{{ site.data.jobs[0].title | escape }}</span></li>
+    {% for section in site.data.about.info %}
+      <li><label>{{ section[0] }}</label><span>{{ section[1] | markdownify }}</span></li>
+    {% endfor %}
+  </ul>
+  <!-- /Personal info section -->
+</div>
+<!-- /About -->

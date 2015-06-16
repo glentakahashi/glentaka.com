@@ -174,10 +174,14 @@ div.top {
   color: white;
 }
 
-.contact-facebook {
+.contacticons a {
   float: left;
   width: 30px;
   height: 30px;
+  color: white;
+}
+
+.contact-facebook {
   background: #222222 url(../images/contact_fb.png) no-repeat 5px 5px;
   &:hover {
     background-color: #3b5998;
@@ -185,9 +189,6 @@ div.top {
 }
 
 .contact-github {
-  float: left;
-  width: 30px;
-  height: 30px;
   background: #222222 url(../images/contact_github.png) no-repeat 3px 3px;
   &:hover {
     background-color: dimgrey;
@@ -195,9 +196,6 @@ div.top {
 }
 
 .contact-in {
-  float: left;
-  width: 30px;
-  height: 30px;
   background: #222222 url(../images/contact_in.png) no-repeat 4px 3px;
   &:hover {
     background-color: #0075a1;

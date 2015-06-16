@@ -1,0 +1,19 @@
+<!-- Stack -->
+<div id="stack">
+  {% for system in site.data.stack %}
+    <h3 class="main-heading"><span>{{ system[0] }}</span></h3>
+    <div class="system">
+      {% for tool in system[1] %}
+        <div class="item">
+          <div class="tool">
+            {{ tool[0] }}
+          </div>
+          <div class="value">
+            {{ tool[1] | markdownify }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% endfor %}
+</div>
+<!-- /Stack -->

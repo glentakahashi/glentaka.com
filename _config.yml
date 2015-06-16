@@ -1,4 +1,7 @@
-exclude: ["TODO", "Makefile", "README.md"]
+exclude:
+ - "TODO"
+ - "Makefile"
+ - "README.md"
 encoding: "utf-8"
 timezone: "America/New_York"
 defaults:
@@ -11,5 +14,5 @@ defaults:
     scope:
       path: "portfolio"
     values:
-      layout: "default"
+      layout: "portfolio"
       type: "portfolio"

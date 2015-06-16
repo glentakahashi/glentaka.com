@@ -1,16 +1,14 @@
 "Lenovo Thinkpad E420":
   os: "Debian Jessie"
-  "window manager": "[cinnamon](http://cinnamon.linuxmint.com/)"
+  desktop: "[cinnamon](http://cinnamon.linuxmint.com/)"
   editor: "vim"
   shell: "zsh"
-  terminalstuff: "tmux"
+  multiplexer: "tmux"
   configs: "[dotfiles](https://github.com/glentakahashi/dotfiles)"
   browser: "chrome"
-"Samsung s3":
-  os: "Cyanogenmod 11"
 "Custom PC":
   os: "Windows 7 Ultimate"
   photos: "lightroom"
 "Personal":
-  podcasts: "Freakonomics, Planet Money, 99% Invisible, NPR"
-  "currently reading": "The Design of Everyday Things"
+  podcasts: "Freakonomics, Planet Money, 99% Invisible, NPR, Motley Fool Answers"
+  books: "The Design of Everyday Things, Thinking Fast and Slow"

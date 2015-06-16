@@ -16,7 +16,7 @@ jQuery(document).ready(function(){
     $logo.fadeOut('slow');
   });
 
-  // Show logo if landing on about page
+  // Show logo if landing not on about page
   var hash = window.location.hash.substr(1);
   if(hash.length > 0 && hash != "about") {
     $("#logo").show();
