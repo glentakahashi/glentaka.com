@@ -26,5 +26,10 @@ jQuery(document).ready(function(){
       );
 
   // Scroll to post automatically
-   $('html, body').scrollTop($(".post").offset().top);
+  $('html, body').scrollTop($(".post").offset().top);
+
+  //Lightbox images because we use markdown
+  $('.post img').each(function(i,v) {
+    $(v).wrap('<a href="'+$(v).attr('src')+'" data-lightbox="post" data-title="'+$(v).attr('alt')+'" />');
+  });
 });
