@@ -13,5 +13,7 @@ jekyll:
 	jekyll build
 
 pdf: jekyll
-	wkhtmltopdf --print-media-type -s Letter _site/index.html _site/files/Glen-Takahashi-Resume-CV.pdf
-	wkhtmltopdf --print-media-type -s A4 _site/index.html _site/files/Glen-Takahashi-Resume-CV-A4.pdf
+	sed 's/="\//="/g' _site/index.html > _site/index2.html
+	wkhtmltopdf --disable-javascript --print-media-type -s Letter _site/index2.html files/Glen-Takahashi-Resume-CV.pdf
+	wkhtmltopdf --disable-javascript --print-media-type -s A4 _site/index2.html files/Glen-Takahashi-Resume-CV.pdf
+	rm _site/index2.html
