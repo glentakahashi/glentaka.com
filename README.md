@@ -25,3 +25,5 @@ improve README.md to be descriptive
 add license(s)
 montserrat font? change colors? biting off stevenla.com
 add physical address to resume
+
+consolidate data files (why are the separated)
