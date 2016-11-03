@@ -3,7 +3,6 @@
 permalink: /files/Glen-Takahashi-Resume-CV.md
 ---
 #Glen Takahashi
-phone: {{ site.data.about.phone }}  
 email: [{{ site.data.about.email }}](mailto:{{ site.data.about.email }})  
 website: [{{ site.data.about.website }}](https://{{ site.data.about.website }})  
 github: [{{ site.data.about.github }}](https://{{ site.data.about.github }})  

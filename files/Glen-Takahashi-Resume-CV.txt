@@ -1,7 +1,6 @@
 ---
 ---
 Glen Takahashi
-phone: {{ site.data.about.phone }}
 email: {{ site.data.about.email }}
 website: https://{{ site.data.about.website }}
 github: https://{{ site.data.about.github }}
