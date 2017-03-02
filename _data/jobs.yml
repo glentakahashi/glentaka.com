@@ -4,7 +4,10 @@
   employer: "Palantir Technologies"
   employerurl: "https://palantir.com"
   location: "New York, NY"
-  duties: []
+  duties: [
+    "Built cybersecurity and analysis tools to help keep networks of 100,000's of devices secure."
+    "Worked in R&D to create multiple new products to enable less technical users to perform complex data analysis."
+    ]
 -
   title: "Forward Deployed Engineer Intern"
   date: "Jun 2014 - Oct 2014"
