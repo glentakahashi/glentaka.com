@@ -10,13 +10,9 @@ title: "Glen Takahashi"
 image: "https://glentaka.com/images/glentaka.png"
 type: "website"
 url: "https://glentaka.com"
-description: "
-  Currently building new accessible data analysis tools for less technical users as a Forward Deployed Engineer at Palantir.
-  "
+description: "Currently working on R&D inside Palantir to make data analysis more accessible to less technical users."
 #endopengraph
-summary: "
-  Currently building new accessible data analysis tools for less technical users as a Forward Deployed Engineer at Palantir.
-  "
+summary: "Currently working on R&D inside Palantir to make data analysis more accessible to less technical users."
 updated: "March 2 2017"
 info:
   Education: "UCLA Computer Science '15"
