@@ -1,14 +1,14 @@
-"Lenovo Thinkpad E420":
-  os: "Debian Jessie"
-  desktop: "[cinnamon](http://cinnamon.linuxmint.com/)"
+"Macbook Pro 15 in.":
+  os: "El Capitan"
   editor: "vim"
   shell: "zsh"
   multiplexer: "tmux"
   configs: "[dotfiles](https://github.com/glentakahashi/dotfiles)"
   browser: "chrome"
-"Custom PC":
-  os: "Windows 7 Ultimate"
-  photos: "lightroom"
+  passwords: "1Password"
+  finances: "YNAB 4"
 "Personal":
   podcasts: "Freakonomics, Planet Money, 99% Invisible, NPR, Motley Fool Answers"
   books: "The Design of Everyday Things, Thinking Fast and Slow"
+  periodicals: "The Economist, Wall Street Journal, New York Times"
+  games: "Witcher 3, Dota 2"
