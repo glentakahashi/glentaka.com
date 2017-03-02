@@ -11,16 +11,14 @@ image: "https://glentaka.com/images/glentaka.png"
 type: "website"
 url: "https://glentaka.com"
 description: "
-  Glen Takahashi is currently a Forward Deployed Engineer at Palantir.
-  His main expertise is in web development but also has experience in full-stack project management.
+  Currently building new accessible data analysis tools for less technical users as a Forward Deployed Engineer at Palantir.
   "
+#endopengraph
 summary: "
-  Recently moved to NYC to work at Palantir as a Forward Deployed Engineer.
-  Also working on a side project/experiment to reinvent how ramen is discovered and reviewed.
+  Currently building new accessible data analysis tools for less technical users as a Forward Deployed Engineer at Palantir.
   "
-updated: "August 9 2015"
+updated: "March 2 2017"
 info:
   Education: "UCLA Computer Science '15"
-  Age: "22"
   Location: "New York, NY"
   Email: "[glen@glentaka.com](mailto:glen@glentaka.com)"
