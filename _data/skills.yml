@@ -1,25 +1,16 @@
 "Programming Languages":
   Java: 7
   Typescript: 6
-  HTML5: 5
-  CSS/Sass/Less: 4
+  CSS/Sass: 4
   Python: 3
-  Go: 1
 "Platforms":
   React: 6
   Redux: 5
   Dropwizard: 5
-  Angular: 3
 "Technologies":
   Spark: 7
-  YARN: 7
+  YARN/Hadoop: 7
   Linux: 7
-  Nginx: 6
-  Git: 6
-  HDFS: 5
   Cassandra: 5
-  Apache: 4
-  Docker: 4
   PostgreSQL: 4
   Elasticsearch: 4
-  Gradle: 3

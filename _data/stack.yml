@@ -1,5 +1,4 @@
 "Macbook Pro 15 in.":
-  os: "El Capitan"
   editor: "vim"
   shell: "zsh"
   multiplexer: "tmux"
@@ -11,4 +10,3 @@
   podcasts: "Freakonomics, Planet Money, 99% Invisible, NPR, Motley Fool Answers"
   books: "The Design of Everyday Things, Thinking Fast and Slow"
   periodicals: "The Economist, Wall Street Journal, New York Times"
-  games: "Witcher 3, Dota 2"

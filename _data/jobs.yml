@@ -5,8 +5,11 @@
   employerurl: "https://palantir.com"
   location: "New York, NY"
   duties:
-  - "Built cybersecurity and analysis tools to help keep networks of 100,000's of devices secure."
-  - "Worked in R&D to create multiple new products to enable less technical users to perform complex data analysis."
+  - "Tech lead/oversight of multiple commercial and government deployments, in charge of product dev and customer growth"
+  - "Ran cross BD-PD initiatives to improve feedback loops and increase FDE contributions to core product"
+  - "Worked on customer outreach in the US, Europe, and Latin America at the executive level to grow our client base"
+  - "Built out new APIs for multiple products to enable FDEs in the field to more easily build on top of the platform"
+  - "Worked in R&D to prototype new intuitive interfaces for spreadsheet-like workflows on Spark"
 -
   title: "Forward Deployed Engineer Intern"
   date: "Jun 2014 - Oct 2014"
