@@ -5,7 +5,6 @@ email: {{ site.data.about.email }}
 website: https://{{ site.data.about.website }}
 github: https://{{ site.data.about.github }}
 linkedin: https://{{ site.data.about.linkedin }}
-facebook: https://{{ site.data.about.facebook }}
 
 ################
 #  Employment  #
