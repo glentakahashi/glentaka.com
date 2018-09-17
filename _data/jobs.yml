@@ -1,15 +1,17 @@
 -
   title: "Forward Deployed Engineer"
-  date: "Oct 2014 - Present"
+  date: "Oct 2014 - Aug 2018"
   employer: "Palantir Technologies"
   employerurl: "https://palantir.com"
   location: "New York, NY"
   duties:
-  - "Tech lead/oversight of multiple commercial and government deployments, in charge of product dev and customer growth"
-  - "Ran cross BD-PD initiatives to improve feedback loops and increase FDE contributions to core product"
-  - "Worked on customer outreach in the US, Europe, and Latin America at the executive level to grow our client base"
-  - "Built out new APIs for multiple products to enable FDEs in the field to more easily build on top of the platform"
-  - "Worked in R&D to prototype new intuitive interfaces for spreadsheet-like workflows on Spark"
+  - "Managed six engineers through their time at Palantir, helping them to navigate the organization, understand the business and its priorities, and to build a growth path to advance their skills"
+  - "Tech lead of three deployments, one of which is the largest government deployment where I lead a team of 12 engineers to build an application designed around displaying large amounts of complex data in an intuitive but comprehensive UI"
+  - "Built a new cross BD-PD team of three engineers to develop new technologies in the field including a tool for identifying bottlenecks
+    in enterprise pipeline environments and a system for integrating data provenance of internal and external systems"
+  - "Worked as lead technical counterpart in multiple successful customer outreach engagements in the US and EU"
+  - "Contributed to development of plugin APIs for the top down analysis and object explorer tools. Built the initial suite of plugins for each of these applications"
+  - "Created a new set of Spark tutorials and working guides to reduce misconceptions and improve performance for both internal engineers building on top of Spark and external customers using our pipeline tools"
 -
   title: "Forward Deployed Engineer Intern"
   date: "Jun 2014 - Oct 2014"
@@ -17,8 +19,7 @@
   employerurl: "https://palantir.com"
   location: "New York, NY"
   duties:
-  - "Wrote a tool for managing and visualizing data pipelines"
-  - "Created a web app for writing richly linked reports using a structured review process"
+  - "Built an integrated web app for writing and editing richly linked reports using a structured review process"
 -
   title: "System Administrator & Developer"
   date: "Jan 2012 - Nov 2014"
@@ -27,7 +28,6 @@
   location: "Los Angeles, CA"
   duties:
   - "Created a website using asynchronous search to provide users with articles compiled from multiple databases"
-  - "Managed servers, projects, and teams to improve stability and productivity"
 -
   title: "Software Engineering Intern"
   date: "Jun 2013 - Sept 2013"
@@ -35,8 +35,7 @@
   employerurl: "https://palantir.com"
   location: "Palo Alto, CA"
   duties:
-  - "Investigated different MapReduce-esque technologies to improve performance over large datasets on machines"
-  - "Began integrating said technologies into a new data processing platform"
+  - "Researched and benchmarked new distributed computing systems Spark and Hadoop to integrate into a new analytical tool for the platform"
 -
   title: "Software Engineering Intern"
   date: "June 2012 - Sept 2012"
@@ -44,5 +43,4 @@
   employerurl: "https://www.adobe.com"
   location: "San Jose, CA"
   duties:
-  - "Designed and programmed an internal tool with wxPython to facilitate compiling and building Adobe Acrobat"
-  - "Prototyped a new website in Django/HTML5 to demonstrate some unreleased features and their integration with websites in the cloud"
+  - "Designed and programmed an internal tool with wxPython to facilitate compiling and building Adobe Acrobat in different environments"

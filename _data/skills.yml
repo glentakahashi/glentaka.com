@@ -5,8 +5,8 @@
   Python: 3
 "Platforms":
   React: 6
-  Redux: 5
-  Dropwizard: 5
+  Redux: 4
+  Dropwizard: 4
 "Technologies":
   Spark: 7
   YARN/Hadoop: 7
