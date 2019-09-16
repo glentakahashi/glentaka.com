@@ -3,3 +3,4 @@ _site
 style.css
 *.map
 .sass-cache
+.DS_Store

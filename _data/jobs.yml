@@ -25,29 +25,25 @@
   employer: "Palantir Technologies"
   employerurl: "https://palantir.com"
   location: "New York, NY"
-  duties:
-  - "Built an integrated web app for writing and editing richly linked reports using a structured review process"
+  duties: []
 -
   title: "System Administrator & Developer"
   date: "Jan 2012 - Nov 2014"
   employer: "Simul8 Group"
   employerurl: "http://simul8group.org"
   location: "Los Angeles, CA"
-  duties:
-  - "Created a website using asynchronous search to provide users with articles compiled from multiple databases"
+  duties: []
 -
   title: "Software Engineering Intern"
   date: "Jun 2013 - Sept 2013"
   employer: "Palantir Technologies"
   employerurl: "https://palantir.com"
   location: "Palo Alto, CA"
-  duties:
-  - "Researched and benchmarked new distributed computing systems Spark and Hadoop to integrate into a new analytical tool for the platform"
+  duties: []
 -
   title: "Software Engineering Intern"
   date: "June 2012 - Sept 2012"
   employer: "Adobe Systems Inc."
   employerurl: "https://www.adobe.com"
   location: "San Jose, CA"
-  duties:
-  - "Designed and programmed an internal tool with wxPython to facilitate compiling and building Adobe Acrobat in different environments"
+  duties: []
